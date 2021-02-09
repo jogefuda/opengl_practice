@@ -1,15 +1,14 @@
 #include "glad/glad.h"
 #include "GLFW/glfw3.h"
-#include <stdio.h>
+#include <iostream>
 
 int main() {
-    int ret;
-    int width = 400;
-    int height = 800;
+    int width = 320;
+    int height = 320;
 
     if (!glfwInit()) {
         printf("%s\n", "glfw init failed");
-            return -1;
+        return -1;
     }
 
     GLFWwindow* window = glfwCreateWindow(width, height, "LearnGl", NULL, NULL);
@@ -20,13 +19,13 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    // ret = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+    // gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     if (!gladLoadGL()) {
         printf("%s\n", "glad init failed");
         return -1;
     }
 
-    glClearColor(.2, .8, .2, 1);
+    glClearColor(.0, .0, .0, 1);
     while (!glfwWindowShouldClose(window)) {
         glClear(GL_COLOR_BUFFER_BIT);
         glfwSwapBuffers(window);
