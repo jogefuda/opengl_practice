@@ -9,7 +9,6 @@
 
 GLuint LoadShaders(const char * vertex_file_path,const char * fragment_file_path);
 int main() {
-    int ret;
     int width = 320;
     int height = 320;
 
@@ -30,7 +29,7 @@ int main() {
 
     glfwMakeContextCurrent(window);
 
-    // ret = gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
+    // gladLoadGLLoader((GLADloadproc)glfwGetProcAddress);
     if (!gladLoadGL()) {
         printf("%s\n", "glad init failed");
         return -1;
